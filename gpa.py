@@ -33,7 +33,7 @@ class GPA:
             plt.plot(sfs,i)
         plt.show()
 
-    def detect_avoided_crossings(self,each_side=5,plot=False):
+    def detect_avoided_crossings(self,each_side=10,plot=False):
         sfs=self.scale_factors
         acs=[]
         for i in range(len(self.stab_energies)-1):
@@ -209,8 +209,8 @@ if __name__ == "__main__":
     print(sfs)
     print(es)
     test.make_stab_plot()
-    test.detect_avoided_crossings(each_side=5,plot=False)
-    test.gpa(porder=0,qorder=1,rorder=2,nr_tol=1.0e-5,sqrt_num_in_points=10,max_nr_iter=100,verbose=4.)
-    test.detect_avoided_crossings(each_side=5,plot=True)
+    test.detect_avoided_crossings(each_side=20,plot=False)
+    test.gpa(porder=3,qorder=4,rorder=5,nr_tol=1.0e-5,sqrt_num_in_points=10,max_nr_iter=100,verbose=4.)
+    test.detect_avoided_crossings(each_side=20,plot=True)
 
 
